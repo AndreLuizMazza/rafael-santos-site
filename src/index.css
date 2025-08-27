@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* UTILITÁRIOS GERAIS DO PROJETO */
+:root { --rs-shadow: 0 10px 30px rgba(0,0,0,.12); }
+.container-resp { @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8; }
+
+.btn { @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-medium transition-all; }
+.btn-primary { @apply btn bg-primary text-dark hover:brightness-95 shadow; }
+.btn-ghost { @apply btn bg-transparent text-white/90 ring-1 ring-white/20 hover:ring-white/40; }
+
+.section { @apply container-resp py-16 md:py-24; }
+.card { @apply rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200; }
+
+/* Gradiente legado (ainda útil em outras seções) */
+.gradient-hero {
+  background:
+    radial-gradient(1200px 600px at 10% 10%, rgba(199,165,137,.25), rgba(199,165,137,0)),
+    radial-gradient(1000px 500px at 90% -10%, rgba(255,255,255,.08), rgba(255,255,255,0)),
+    linear-gradient(180deg, rgba(0,0,0,.66) 0%, rgba(0,0,0,.66) 100%);
+}
+
+/* TIPOGRAFIA FLUIDA E QUALIDADE VISUAL DO HERO */
+.title {
+  font-weight: 700;
+  line-height: 1.07;
+  letter-spacing: -0.02em;
+  font-size: clamp(2rem, 6vw, 4.25rem);
+  text-wrap: balance;
+}
+
+.headline-emphasis {
+  background-image: linear-gradient(90deg, #c7a589, #f3e6d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: .22em;
+  font-size: .72rem;
+  padding: .375rem .625rem;
+  border-radius: 9999px;
+  background-color: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.22);
+  display: inline-block;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  max-width: 48rem;
+  color: rgba(255,255,255,0.85);
+  text-wrap: pretty;
+}
+
+/* Badges (chips) do bloco de confiança */
+.rounded-full\/btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .45rem .7rem;
+  border-radius: 9999px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.16);
+  backdrop-filter: blur(4px);
+}
+
+/* Acessibilidade – reduz animações se o usuário pedir */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
