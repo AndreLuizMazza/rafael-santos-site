@@ -30,6 +30,7 @@ export default function Atuacao() {
           </p>
         </article>
       </div>
+
     </Section>
   );
 }

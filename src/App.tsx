@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { sendPageview } from "@/lib/analytics";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 // Layout
 import Navbar from "./components/Navbar";

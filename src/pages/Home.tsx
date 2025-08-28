@@ -25,7 +25,7 @@ export default function Home() {
           ))}
         </div>
       </Section>
-       <CTAWhatsApp />
+
       <Section title="Depoimentos reais" subtitle="Profissionalismo reconhecido por quem já foi defendido.">
         <Testimonials />
       </Section>
