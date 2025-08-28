@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { sendPageview } from "@/lib/analytics";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"; // ⬅️ versão correta para Vite/React
 
 // Layout
 import Navbar from "./components/Navbar";
@@ -48,18 +48,20 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sobre" element={<Sobre />} />
-         <Route path="/contato" element={<Contato />} />
-          <Route path="/atuacao" element={<Atuacao />} />
-           <Route path="/depoimentos" element={<Depoimentos />} />
+        <Route path="/contato" element={<Contato />} />
+        <Route path="/atuacao" element={<Atuacao />} />
+        <Route path="/depoimentos" element={<Depoimentos />} />
         <Route path="/politica-de-privacidade" element={<PoliticaPrivacidade />} />
         <Route path="/politica-de-cookies" element={<PoliticaCookies />} />
         <Route path="/termos-de-uso" element={<TermosUso />} />
-              <Route path="/notfound" element={<NotFound />} />
-
+        <Route path="/notfound" element={<NotFound />} />
       </Routes>
 
       <Footer />
       <CookieBanner />
+
+      {/* Vercel Speed Insights */}
+      <SpeedInsights />
     </>
   );
 }
