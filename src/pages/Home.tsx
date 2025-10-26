@@ -3,12 +3,17 @@ import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import Testimonials from "@/components/Testimonials";
 import CTAWhatsApp from "@/components/CTAWhatsApp";
+import HeroTestimonials from "@/components/HeroTestimonials";
+import UrgencyChecklist from "@/components/UrgencyChecklist";
 import { Shield, Gavel, Scale, Handshake } from "lucide-react";
 
 export default function Home() {
   return (
     <main>
       <Hero />
+
+
+
       <Section id="atuacao" title="Áreas de atuação" subtitle="Atendimento ágil, técnico e estratégico.">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
@@ -25,10 +30,11 @@ export default function Home() {
           ))}
         </div>
       </Section>
-
+ <UrgencyChecklist />
       <Section title="Depoimentos reais" subtitle="Profissionalismo reconhecido por quem já foi defendido.">
         <Testimonials />
       </Section>
+     
       <CTAWhatsApp />
     </main>
   );

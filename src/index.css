@@ -101,3 +101,5 @@
 .btn-whatsapp:hover { filter: brightness(1.05); }
 .btn-whatsapp:focus-visible { @apply outline-none ring-2 ring-offset-2 ring-[#25D366]/40; }
 .dark .btn-whatsapp { color: #0b0b0b; } /* mantém contraste no dark */
+
+
