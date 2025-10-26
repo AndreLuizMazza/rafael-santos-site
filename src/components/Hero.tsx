@@ -43,8 +43,8 @@ export default function Hero() {
             <a
               href="https://wa.me/5546991061375?text=Olá%2C%20gostaria%20de%20falar%20com%20o%20Dr.%20Rafael%20Santos."
               target="_blank"
-              rel="noreferrer"
-              className="btn-primary"
+              rel="noopener noreferrer"
+              className="btn-whatsapp dark:text-zinc-900"
               aria-label="Falar agora no WhatsApp com o Dr. Rafael Santos"
             >
               Falar no WhatsApp

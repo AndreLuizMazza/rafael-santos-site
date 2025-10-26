@@ -41,13 +41,13 @@ export default function Sobre() {
           </figure>
 
           {/* Bio */}
-          <article className="card p-6 md:p-8 lg:col-span-2">
+          <article className="card transition-transform hover:-translate-y-[2px] dark:bg-zinc-900 dark:border-zinc-800 p-6 md:p-8 lg:col-span-2">
             <h3 className="text-xl font-semibold">Quem sou</h3>
-            <p className="mt-3 text-zinc-700">
+            <p className="mt-3 text-zinc-700 dark:text-zinc-200">
               Advogado criminalista com atuação dedicada à proteção das liberdades individuais e ao devido processo legal.
               Minha prática combina técnica, estratégia e atendimento humanizado — do primeiro contato à última instância.
             </p>
-            <p className="mt-3 text-zinc-700">
+            <p className="mt-3 text-zinc-700 dark:text-zinc-200">
               Atendo urgências (flagrantes, audiências de custódia), acompanho inquéritos e ações penais e atuo em plenário do júri,
               com teses sólidas, linguagem clara e foco em resultados.
             </p>
@@ -59,11 +59,11 @@ export default function Sobre() {
         {/* Credibilidade (cards) */}
         <div className="mt-10 grid md:grid-cols-3 gap-4">
           {cred.map((c, i) => (
-            <div key={i} className="card p-6 flex items-start gap-3">
+            <div key={i} className="card transition-transform hover:-translate-y-[2px] dark:bg-zinc-900 dark:border-zinc-800 p-6 flex items-start gap-3">
               <c.icon className="text-primary shrink-0" />
               <div>
                 <p className="font-semibold">{c.title}</p>
-                <p className="text-sm text-zinc-600">{c.desc}</p>
+                <p className="text-sm text-zinc-600 dark:text-zinc-300">{c.desc}</p>
               </div>
             </div>
           ))}

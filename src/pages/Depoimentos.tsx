@@ -7,7 +7,7 @@ export default function Depoimentos() {
     <main>
       <Section title="Depoimentos de Clientes" subtitle="O que meus clientes falam sobre mim">
         <Testimonials />
-        <p className="mt-8 text-center text-zinc-700">
+        <p className="mt-8 text-center text-zinc-700 dark:text-zinc-200">
           Sua liberdade e dignidade não podem esperar.
         </p>
       </Section>

@@ -1,3 +1,4 @@
+import BottomDockCTA from '@/components/BottomDockCTA';
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { sendPageview } from "@/lib/analytics";
@@ -7,6 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react"; // ⬅️ versão 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CookieBanner from "./components/CookieBanner";
+import ThemeDock from "./components/ThemeDock";
 
 // Páginas
 import Home from "./pages/Home";
@@ -39,7 +41,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <>
+    <div className="min-h-screen bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
       <TrackPageViews />
       <ScrollToTop />
 
@@ -59,9 +61,11 @@ export default function App() {
 
       <Footer />
       <CookieBanner />
+      <ThemeDock />
+      <BottomDockCTA />
 
       {/* Vercel Speed Insights */}
       <SpeedInsights />
-    </>
+    </div>
   );
 }

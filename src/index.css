@@ -72,3 +72,32 @@
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+
+/* === UI/UX polish === */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--tw-ring-color, #c7a589) 100%, transparent);
+  border-radius: 10px;
+}
+.card {
+  box-shadow: 0 1px 0 rgba(0,0,0,.04);
+}
+:root .dark .card {
+  box-shadow: 0 0 0 1px rgba(255,255,255,.06), 0 8px 30px rgba(0,0,0,.35);
+}
+/* Section spacing more compact on mobile */
+.section {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+/* Improve link readability in dark */
+.dark a { color: color-mix(in srgb, #ffffff 85%, transparent); }
+.dark a:hover { color: #fff; }
+
+
+/* === Padronização global do botão de WhatsApp === */
+.btn-whatsapp { @apply inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 text-sm font-medium shadow transition active:scale-[0.99]; background-color: #25D366; color: #111111; }
+.btn-whatsapp:hover { filter: brightness(1.05); }
+.btn-whatsapp:focus-visible { @apply outline-none ring-2 ring-offset-2 ring-[#25D366]/40; }
+.dark .btn-whatsapp { color: #0b0b0b; } /* mantém contraste no dark */

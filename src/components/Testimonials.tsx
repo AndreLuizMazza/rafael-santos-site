@@ -35,9 +35,9 @@ export default function Testimonials() {
   return (
     <div className="grid md:grid-cols-3 gap-6">
       {depo.map((d, i) => (
-        <figure key={i} className="card p-6">
-          <blockquote className="text-zinc-700">“{d.text}”</blockquote>
-          <figcaption className="mt-4 text-sm text-zinc-500">— {d.name}</figcaption>
+        <figure key={i} className="card p-6 dark:bg-zinc-900 dark:border-zinc-800">
+          <blockquote className="text-zinc-700 dark:text-zinc-200">“{d.text}”</blockquote>
+          <figcaption className="mt-4 text-sm text-zinc-500 dark:text-zinc-400">— {d.name}</figcaption>
         </figure>
       ))}
     </div>
